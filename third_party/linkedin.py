@@ -4,13 +4,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool):
     """scrape information from LinkedIn profiles,
     Manually scrape the information from the LinkedIn profile"""
 
     if mock:
-        linkedin_profile_url = "https://gist.githubusercontent.com/emarco177/0d6a3f93dd06634d95e46a2782ed7490/raw/78233eb934aa9850b689471a604465b188e761a0/eden-marco.json"
+        linkedin_profile_url = "https://gist.githubusercontent.com/gmachinromero/26b6a4bb46a37ffac6a158bccd541955/raw/586fbab08b202a33eb41d725ed40e8f3a9d90e58/gmachinromero-linkedin.json"
         response = requests.get(
             linkedin_profile_url,
             timeout=10,
@@ -42,7 +41,7 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool):
 if __name__ == "__main__":
     print(
         scrape_linkedin_profile(
-            linkedin_profile_url="https://www.linkedin.com/in/eden-marco/",
+            linkedin_profile_url="https://www.linkedin.com/in/gmachinromero/",
             mock=True
         )
     )
