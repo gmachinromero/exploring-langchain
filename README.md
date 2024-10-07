@@ -1,4 +1,4 @@
-# Exploring LangChain! =)
+# Exploring LangChain! 🦜️🔗
 
 Este repositorio contiene diversas pruebas y experimentos realizados para aprender y explorar las capacidades del framework [LangChain](https://langchain.com/). Aquí encontrarás ejemplos de cómo utilizar las distintas herramientas que proporciona LangChain para la creación de aplicaciones basadas en inteligencia artificial, flujos de trabajo y manejo de grandes lenguajes de modelo (LLM).
 
