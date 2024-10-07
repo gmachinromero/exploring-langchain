@@ -27,3 +27,7 @@ Asegúrate de tener instalado Python 3.11+ y pipenv para crear un entorno con to
 ```bash
 pipenv install
 ```
+
+## Recursos
+- https://python.langchain.com/v0.2/docs/introduction/
+- Udemy: LangChain- Develop LLM powered applications with LangChain
