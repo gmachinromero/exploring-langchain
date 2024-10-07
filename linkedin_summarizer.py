@@ -1,5 +1,7 @@
 # Libraries
 # ------------------------------------------------------------------------------
+from typing import Tuple
+
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -7,12 +9,12 @@ from langchain_openai import ChatOpenAI
 from agents.linkedin_lookup_agent import lookup as linkedin_look_agent
 from third_party.linkedin import scrape_linkedin_profile
 
-from output_parsers import summary_parser
+from output_parsers import Summary, summary_parser
 
 
 # Code
 # ------------------------------------------------------------------------------
-def linkedin_summarizer(name: str) -> str:
+def linkedin_summarizer(name: str) -> Tuple[Summary, str]:
 
     # Get LinkedIn Profile URL
     linkedin_username = linkedin_look_agent(name=name)
@@ -42,14 +44,16 @@ def linkedin_summarizer(name: str) -> str:
     llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 
     # Instance Chain
-    # chain = summary_prompt_template | llm
     # chain = summary_prompt_template | llm | StrOutputParser()
     chain = summary_prompt_template | llm | summary_parser
 
     # Invoke Chain
-    res = chain.invoke(input={"information": linkedin_data})
+    res:Summary = chain.invoke(input={"information": linkedin_data})
 
     print(res)
+    print(linkedin_data.get("profile_pic_url"))
+
+    return res, linkedin_data.get("profile_pic_url")
 
 
 
