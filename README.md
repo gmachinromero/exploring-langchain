@@ -27,6 +27,11 @@ Asegúrate de tener instalado Python 3.11+ y pipenv para crear un entorno con to
 pipenv install
 ```
 
+Adicionalmente necesitarás los token siguientes en un fichero de configuración `.env`:
+- OPENAI_API_KEY
+- PROXYCURL_API_KEY
+- TAVILY_API_KEY
+
 ## Recursos
 - https://python.langchain.com/v0.2/docs/introduction/
 - Udemy: LangChain- Develop LLM powered applications with LangChain
