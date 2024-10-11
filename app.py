@@ -1,11 +1,11 @@
 # Libraries
 # ------------------------------------------------------------------------------
-from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
+load_dotenv()
+
+from flask import Flask, render_template, request, jsonify
 
 from linkedin_summarizer import linkedin_summarizer
-
-load_dotenv()
 
 
 # Code

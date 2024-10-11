@@ -12,6 +12,7 @@ from third_party.linkedin import scrape_linkedin_profile
 from output_parsers import Summary, summary_parser
 
 
+
 # Code
 # ------------------------------------------------------------------------------
 def linkedin_summarizer(name: str) -> Tuple[Summary, str]:

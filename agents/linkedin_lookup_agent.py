@@ -21,11 +21,10 @@ def lookup(name: str) -> str:
     I want you to get it me a link to their Linkedin profile page.
     
     Your answer should contain only a URL, and you must ensure that the URL has
-    a structure similar to: https://www.linkedin.com/in/<name>/.
+    a structure similar to: https://www.linkedin.com/in/<name>/. Where <name>
+    is a nick of {person_full_name}.
     
     Avoid these kind of structures: https://www.linkedin.com/pub/dir/.
-    
-    Where <name> is a nick of {person_full_name}.
     """
 
     prompt_template = PromptTemplate(
