@@ -5,12 +5,11 @@ Este repositorio contiene diversas pruebas y experimentos realizados para aprend
 
 ## Contenido
 
-1. **Introducción a LangChain**: Primeros pasos para configurar y utilizar el framework.
-2. **Conexiones a APIs**: Ejemplos de cómo integrar LangChain con diversas APIs externas.
-3. **Memoria y Persistencia**: Experimentos con la memoria de conversación y cómo manejar el estado entre sesiones.
-4. **Agentes y Herramientas**: Ejercicios que demuestran cómo utilizar agentes para resolver problemas más complejos.
-5. **Personalización de Prompts**: Experimentación con la creación de prompts efectivos para distintos casos de uso.
-6. **Otras Pruebas**: Exploraciones adicionales que abarcan otros aspectos de LangChain.
+El contenido del repositorio permite ejecutar diferentes scripts de Python con el framework de Langchain con la idea de explorar:
+- Utilizar LLM tanto de forma online como en local
+- Conexiones API
+- Desarrollo de agentes (Agents)
+- Desarrollo de herramientas (Tools)
 
 
 ## Instalación
