@@ -10,6 +10,7 @@ El contenido del repositorio permite ejecutar diferentes scripts de Python con e
 - Conexiones API
 - Desarrollo de agentes (Agents)
 - Desarrollo de herramientas (Tools)
+- Trazabilidad con LangSmith 
 
 
 ## Instalación
