@@ -1,3 +1,5 @@
+# Libraries
+# ------------------------------------------------------------------------------
 from typing import List, Dict, Any
 
 from pydantic import BaseModel, Field
@@ -5,6 +7,8 @@ from langchain_core.output_parsers import PydanticOutputParser
 
 
 
+# Code
+# ------------------------------------------------------------------------------
 class Summary(BaseModel):
     """
     Represents a summary with interesting facts.

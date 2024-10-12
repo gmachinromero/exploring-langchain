@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 from agents.linkedin_lookup_agent import lookup as linkedin_look_agent
 from third_party.linkedin import scrape_linkedin_profile
 
-from output_parsers import Summary, summary_parser
+from parsers.output_parser import (Summary, summary_parser)
 
 
 
