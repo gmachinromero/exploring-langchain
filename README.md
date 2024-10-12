@@ -32,6 +32,10 @@ Adicionalmente necesitarás los token siguientes en un fichero de configuración
 - OPENAI_API_KEY
 - PROXYCURL_API_KEY
 - TAVILY_API_KEY
+- LANGCHAIN_TRACING_V2
+- LANGCHAIN_ENDPOINT
+- LANGCHAIN_API_KEY
+- LANGCHAIN_PROJECT
 
 ## Recursos
 - https://python.langchain.com/v0.2/docs/introduction/
