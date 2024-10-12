@@ -41,7 +41,11 @@ def lookup(name: str) -> str:
     ]
 
     # Prompts developed by the LangChain community
-    react_prompt = hub.pull("hwchase17/react")
+    # react_prompt = hub.pull("hwchase17/react")
+    react_prompt = hub.pull(
+        owner_repo_commit="hwchase17/react",
+        api_url="https://api.smith.langchain.com" # US or Europe
+    )
 
     # Instantiate the agent
     agent = create_react_agent(
