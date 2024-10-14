@@ -7,7 +7,7 @@ Este repositorio contiene diversas pruebas y experimentos realizados para aprend
 
 El contenido del repositorio permite ejecutar diferentes scripts de Python con el framework de Langchain con la idea de explorar:
 - Utilizar LLM tanto de forma online como en local
-- Conexiones API
+- Conexiones a APIs
 - Desarrollo de agentes (Agents)
 - Desarrollo de herramientas (Tools)
 - Trazabilidad con LangSmith 
