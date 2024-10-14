@@ -1,6 +1,4 @@
 from dotenv import load_dotenv
-from langchain.chains.qa_generation.prompt import templ
-from langchain.chains.summarize.refine_prompts import prompt_template
 from langchain_core.prompts import PromptTemplate
 from langchain_core.tools import render_text_description
 from langchain_openai import ChatOpenAI
