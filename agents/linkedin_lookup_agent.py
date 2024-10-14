@@ -13,7 +13,6 @@ from tools.tools import get_profile_url_tavily
 
 
 def lookup(name: str) -> str:
-    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 
     template = """
     Given the full name: {person_full_name}.
@@ -31,6 +30,8 @@ def lookup(name: str) -> str:
         template=template,
         input_variables=["person_full_name"]
     )
+
+    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 
     tools_for_agent = [
         Tool(
