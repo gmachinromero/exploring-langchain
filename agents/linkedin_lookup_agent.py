@@ -1,5 +1,3 @@
-import os
-
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -21,7 +19,7 @@ def lookup(name: str) -> str:
     
     Your answer should contain only a URL, and you must ensure that the URL has
     a structure similar to: https://www.linkedin.com/in/<name>/. Where <name>
-    is a nick of {person_full_name}.
+    is a possible nick of {person_full_name}.
     
     Avoid these kind of structures: https://www.linkedin.com/pub/dir/.
     """
@@ -42,10 +40,35 @@ def lookup(name: str) -> str:
     ]
 
     # Prompts developed by the LangChain community
-    react_prompt = hub.pull(
-        owner_repo_commit="hwchase17/react",
-        api_url="https://api.smith.langchain.com" # Change for US or Europe
+    #react_prompt = hub.pull(
+    #    owner_repo_commit="hwchase17/react",
+    #    api_url="https://api.smith.langchain.com" # Change for US or Europe
+    #)
+
+    # Define a ReAct Prompt
+    react_prompt = PromptTemplate.from_template(
+        """Answer the following questions as best you can. You have access to the following tools:
+    
+        {tools}
+    
+        Use the following format:
+    
+        Question: the input question you must answer
+        Thought: you should always think about what to do
+        Action: the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+        ... (this Thought/Action/Action Input/Observation can repeat N times)
+        Thought: I now know the final answer
+        Final Answer: the final answer to the original input question
+    
+        Begin!
+    
+        Question: {input}
+        Thought: {agent_scratchpad}"""
     )
+
+
 
     # Instantiate the agent
     agent = create_react_agent(
@@ -58,6 +81,7 @@ def lookup(name: str) -> str:
     agent_executor = AgentExecutor(
         agent=agent,
         tools=tools_for_agent,
+        handle_parsing_error=True,
         verbose=True
     )
 
