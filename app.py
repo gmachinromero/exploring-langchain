@@ -30,6 +30,8 @@ def process():
         {
             "summary_and_facts": summary.to_dict(),
             "picture_url": profile_pic_url,
+            "ice_breakers": "WIP",
+            "interests": "WIP"
         }
     )
 
