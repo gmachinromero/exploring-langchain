@@ -47,7 +47,8 @@ def lookup(name: str) -> str:
 
     # Define a ReAct Prompt
     react_prompt = PromptTemplate.from_template(
-        """Answer the following questions as best you can. You have access to the following tools:
+        """
+        Answer the following questions as best you can. You have access to the following tools:
     
         {tools}
     
@@ -65,7 +66,8 @@ def lookup(name: str) -> str:
         Begin!
     
         Question: {input}
-        Thought: {agent_scratchpad}"""
+        Thought: {agent_scratchpad}
+        """
     )
 
 
