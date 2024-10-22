@@ -20,7 +20,7 @@ El resultado del proyecto es desplegar un frontal en local, que dado el nombre d
 [Aspiracional]
 En futuras iteraciones se espera generar también de forma automática un mensaje llamativo para contactar con el por LinkedIn, en base al contenido de su perfil.
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 
 ## Instalación
@@ -38,6 +38,11 @@ Asegúrate de tener instalado Python 3.11+ y pipenv para crear un entorno con to
 pipenv install
 ```
 
+Para desplegar el frontal debes ejecutar:
+```bash
+python app.py
+```
+
 Adicionalmente necesitarás los token siguientes en un fichero de configuración `.env`:
 - `OPENAI_API_KEY`
 - `PROXYCURL_API_KEY`
@@ -47,7 +52,36 @@ Adicionalmente necesitarás los token siguientes en un fichero de configuración
 - `LANGCHAIN_API_KEY`
 - `LANGCHAIN_PROJECT`
 
-Dado que el uso de algunas de estas APIs como proxycurl es limitado, se almacenan respuestas tipo en GitHub Gist para poder trabajar de forma continuada sin agotar el número de llamadas límite a la API.
+Dado que el uso de algunas de estas APIs como proxycurl es limitado, se almacenan response tipo en GitHub Gist para poder trabajar de forma continuada sin agotar el número de llamadas límite a la API.
+
+## Esquema
+El repositorio tiene la siguiente estructura de carpetas:
+
+```
+exploring-langchain/
+├── agents/
+│   ├── __init__.py
+│   └── linkedin_lookup_agent.py
+├── parsers/
+│   ├── __init__.py
+│   └── output_parser.py
+├── third_party/              
+│   ├── __init__.py
+│   └── linkedin.py
+├── tools/
+│   ├── __init__.py
+│   └── tools.py
+├── templates/                 # Plantilla para el frontal
+│   └── index.html
+├── .env                       # Fichero para API_KEYS
+├── .gitignore                 # Archivos a ignorar por Git
+├── app.py                     # Desplegar app con linkedin_summarizer.py
+├── ice_breaker.py             # PoC
+├── linkedin_summarizer.py     # Código principal
+├── Pipfile                    # Dependencias del proyecto
+├── Pipfile.lock               # Dependencias del proyecto
+└── README.md                  # Descripción general del proyecto
+```
 
 ## Recursos
 - https://python.langchain.com/v0.2/docs/introduction/
