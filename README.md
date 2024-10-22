@@ -28,8 +28,8 @@ En futuras iteraciones se espera generar también de forma automática un mensaj
 Para clonar este repositorio y comenzar a experimentar con LangChain, sigue estos pasos:
 
 ```bash
-git clone https://github.com/gmachinromero/project-exploring-langchain.git
-cd project-exploring-langchain
+git clone https://github.com/gmachinromero/exploring-langchain.git
+cd exploring-langchain
 ```
 
 Asegúrate de tener instalado Python 3.11+ y pipenv para crear un entorno con todas las dependencias necesarias:
