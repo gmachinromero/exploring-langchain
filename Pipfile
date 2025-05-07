@@ -11,6 +11,7 @@ langchainhub = "*"
 langchain-ollama = "*"
 flask = "*"
 langsmith = "*"
+openai = "*"
 
 [dev-packages]
 
