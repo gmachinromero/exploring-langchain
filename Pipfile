@@ -12,6 +12,7 @@ langchain-ollama = "*"
 flask = "*"
 langsmith = "*"
 openai = "*"
+pandas = "*"
 
 [dev-packages]
 
