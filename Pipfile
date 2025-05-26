@@ -14,6 +14,9 @@ langsmith = "*"
 openai = "*"
 pandas = "*"
 docarray = "*"
+langchain-experimental = "*"
+numexpr = "*"
+wikipedia = "*"
 
 [dev-packages]
 
