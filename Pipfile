@@ -17,6 +17,7 @@ docarray = "*"
 langchain-experimental = "*"
 numexpr = "*"
 wikipedia = "*"
+pypdf = "*"
 
 [dev-packages]
 
